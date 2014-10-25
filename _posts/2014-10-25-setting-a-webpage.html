@@ -33,7 +33,7 @@ title: 网页+服务器+域名 布置网站
 <p>
 效果：
 </p>
-<img src="../_img/image001.png">
+<img src="_img/image001.png">
 <p>
 但是这个网页只能在本地浏览，如何能在外部网上也能浏览呢？<br/>
  </p>
@@ -52,13 +52,13 @@ title: 网页+服务器+域名 布置网站
 先把网页上传到服务器<br/>
 Windows中执行cmd，定位到psftp.exe所在文件夹<br/>
 </p>
-<img src="../_img/image003.png">
+<img src="_img/image003.png">
 <p> 
 大写P要注意，而且要在文件加下执行。<br/>
 回车之后，登录成功的话，就进入root的命令行<br/>
  </p>
-<img src="../_img/image004.png"></br></br>
-<img src="../_img/image005.png">
+<img src="_img/image004.png"></br></br>
+<img src="_img/image005.png">
 <p>
  
 下面一次解释命令的意义<br/>
@@ -79,11 +79,11 @@ local:d:\desktop\test.html => remote:/usr/test/test.html<br/>
 
 接下来设置访问路径<br/>
 </p>
-<img src="../_img/image006.png">
+<img src="_img/image006.png">
 <p> 
 如果出现以下错误<br/>
  </p>
-<img src="../_img/image007.png">
+<img src="_img/image007.png">
 <p> 
 解决方法： <br/>
 1.vi /etc/ssh/sshd_config 将PermitRootLogin的注释取消，或者将no改为yes。<br/>
@@ -93,17 +93,17 @@ local:d:\desktop\test.html => remote:/usr/test/test.html<br/>
 
 输入用户名root和密码，密码直接输完，界面上不会显示<br/>
 </p>
-<img src="../_img/image008.png">
+<img src="_img/image008.png">
 <p> 
 输完后回车
  </p>
-<img src="../_img/image011.jpg">
+<img src="_img/image011.jpg">
 <p> 
 
 输入远程机上的nginx配置文件的路径
  </p>
-<img src="../_img/image012.png"><br/><br/>
-<img src="../_img/image013.png">
+<img src="_img/image012.png"><br/><br/>
+<img src="_img/image013.png">
 <p> 
 
  
@@ -142,12 +142,12 @@ Server{
 按Esc退出编辑  :wq 保存编辑退出，然后重启 nginx，是配置生效            
 nginx –s reload 回车                                                   
   </p>                                                                
-<img src="../_img/image014.png">
+<img src="_img/image014.png">
 <p> 
 
 在IE里面输入 200.200.1.10 就会出现测试界面（好吧，这张是我PS的 -_-!!）
    </p>
-<img src="../_img/image015.png">
+<img src="_img/image015.png">
 <p> 
 
 有时候你会抱怨，我擦，这一堆一堆的数字，谁记得住，为什么不能取点有意义的名字呢？恩恩，这个时候，域名闪亮登场，可以理解域名是目标ip地址的别名，比如我们常用的www.baidu.com 它是115.239.211.110的别名，在IE里面输入两个地址，都能跳出百度的网页，那么，我也想要一个，请往下看：
@@ -156,7 +156,7 @@ nginx –s reload 回车
 一个不好的消息，大部分域名是需要收费的，当然也有一些免费的比如 www.dot.tk,基本差不多，这里用我自己的一个域名来举例（如果不知道怎么搞到域名，baidu吧，收费的东西，在没给钱的时候，你总是可以找客服提很多问题^^，比如挖掘机什么的）
 好吧，不管你在什么网上搞到了域名，找到域名解析设置，添加A记录，指向200.200.1.10
 </p>
-<img src="../_img/image016.png">
+<img src="_img/image016.png">
 <p> 
 Ok 大功告成，有些域名解析需要几个小时才能生效，so，等等，然后惊喜就会出现了
 </p>
