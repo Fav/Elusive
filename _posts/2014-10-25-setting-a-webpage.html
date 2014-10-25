@@ -1,0 +1,162 @@
+---
+layout: default
+title: 网页+服务器+域名 布置网站
+---
+
+<h1>布置网站</h1>
+
+<p>
+需要对linux有简单的了解，会使用简单的命令<br/>
+我做这里的步骤时也有很多不懂，于是百度，谷歌，找人请教，终于走通了，哈哈。<br/>
+
+网页：<br/>
+服务器：Linux + nginx  ，客户机:windows7<br/>
+域名：<br/>
+</p>
+
+<h2>网页部分</h2>
+<p>
+建立一个本地网页，很简单（http://www.w3school.com.cn/html/index.asp），类似如下内容，复制到记事本中，保存为  测试.html,使用浏览器打开<br/>
+内容：<br/>
+<p>
+<textarea rows="13" cols="50">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的网页</title>
+</head>
+	<body>
+		<h1>测试</h1>
+	</body>
+</html>
+</textarea>
+<p>
+效果：
+</p>
+<img src="../_img/image001.png">
+<p>
+但是这个网页只能在本地浏览，如何能在外部网上也能浏览呢？<br/>
+ </p>
+ 
+<h2>服务器：Linux + nginx</h2>
+<p>
+要将我们做好的网页能在万维网上直接看到，需要把网页文件放到服务器上，经过一系列的配置（租服务器就需要付费了），这里服务器已经安装好nginx，看看这部分的原材料：<br/>
+服务器IP地址：以下用  200.200.1.10<br/>
+用户名：root<br/>
+密码：testmima<br/>
+端口：28565<br/>
+
+连接服务器：下载putty.exe 和 psftp.exe (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)<br/>
+都是绿色的，直接可以用<br/>
+
+先把网页上传到服务器<br/>
+Windows中执行cmd，定位到psftp.exe所在文件夹<br/>
+</p>
+<img src="../_img/image003.png">
+<p> 
+大写P要注意，而且要在文件加下执行。<br/>
+回车之后，登录成功的话，就进入root的命令行<br/>
+ </p>
+<img src="../_img/image004.png"></br></br>
+<img src="../_img/image005.png">
+<p>
+ 
+下面一次解释命令的意义<br/>
+
+//进入 usr文件夹<br/>
+psftp> cd /usr		<br/>
+Remote directory is now /usr<br/><br/>
+
+//创建test文件夹<br/>
+psftp> mkdir test	<br/>
+mkdir /usr/test: OK<br/><br/>
+
+//上传d:\desktop\test.html（本机路径） 到/usr/test/test.html（目标路径）<br/>
+psftp> put d:\desktop\test.html /usr/test/test.html 	<br/>
+local:d:\desktop\test.html => remote:/usr/test/test.html<br/>
+
+至此，文件上传完成。<br/>
+
+接下来设置访问路径<br/>
+</p>
+<img src="../_img/image006.png">
+<p> 
+如果出现以下错误<br/>
+ </p>
+<img src="../_img/image007.png">
+<p> 
+解决方法： <br/>
+1.vi /etc/ssh/sshd_config 将PermitRootLogin的注释取消，或者将no改为yes。<br/>
+2.service sshd restart<br/>
+3.setup命令进入将防火墙关闭。<br/>
+以上是网上搜索的，可是没有用，因为我…..端口号输入错了 -_-! 如果你也出现这种情况，请检查一下自己的端口号~<br/>
+
+输入用户名root和密码，密码直接输完，界面上不会显示<br/>
+</p>
+<img src="../_img/image008.png">
+<p> 
+输完后回车
+ </p>
+<img src="../_img/image011.jpg">
+<p> 
+
+输入远程机上的nginx配置文件的路径
+ </p>
+<img src="../_img/image012.png"><br/><br/>
+<img src="../_img/image013.png">
+<p> 
+
+ 
+这里我们需要配置成这样                   <br/>
+<textarea rows="9" cols="50">                                         
+Server{                                 
+	listen 80;                          
+	server_name localhost;              
+	location / {                        
+		root  /usr/test                 
+		index test.html                 
+	}                                       
+}    
+</textarea>          
+</br>                       
+
+如果一个ip地址要对应不同的网页就需要配置多个server                     <br/>
+<textarea rows="20" cols="80">  
+Server{                                                                
+	listen 80;                                                         
+	server_name  网址1 例如：www.page1.com;                            
+	location / {                                                       
+		root  /usr/test                                                
+		index  test1.html                                              
+	}                                                                      
+}                                                                      
+Server{                                                                
+	listen 80;                                                         
+	server_name网址2 例如：www.page2.com;                              
+	location / {                                                       
+		root  /usr/test                                                
+		index  test2.html                                              
+	}                                                                      
+}   
+</textarea>  <br/>                                                                   
+按Esc退出编辑  :wq 保存编辑退出，然后重启 nginx，是配置生效            
+nginx –s reload 回车                                                   
+  </p>                                                                
+<img src="../_img/image014.png">
+<p> 
+
+在IE里面输入 200.200.1.10 就会出现测试界面（好吧，这张是我PS的 -_-!!）
+   </p>
+<img src="../_img/image015.png">
+<p> 
+
+有时候你会抱怨，我擦，这一堆一堆的数字，谁记得住，为什么不能取点有意义的名字呢？恩恩，这个时候，域名闪亮登场，可以理解域名是目标ip地址的别名，比如我们常用的www.baidu.com 它是115.239.211.110的别名，在IE里面输入两个地址，都能跳出百度的网页，那么，我也想要一个，请往下看：
+
+<h2>域名</h2>
+一个不好的消息，大部分域名是需要收费的，当然也有一些免费的比如 www.dot.tk,基本差不多，这里用我自己的一个域名来举例（如果不知道怎么搞到域名，baidu吧，收费的东西，在没给钱的时候，你总是可以找客服提很多问题^^，比如挖掘机什么的）
+好吧，不管你在什么网上搞到了域名，找到域名解析设置，添加A记录，指向200.200.1.10
+</p>
+<img src="../_img/image016.png">
+<p> 
+Ok 大功告成，有些域名解析需要几个小时才能生效，so，等等，然后惊喜就会出现了
+</p>
