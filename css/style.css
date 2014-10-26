@@ -4,12 +4,12 @@ body{
   font-size:        small;
   margin:           10%,0;
 }	
-#main {
+.main {
   background-image:	url(img/background.gif);
   background-repeat: repeat-x;
   font-size:        100%;
   padding:          15px;
-  margin:           10px 10px 10px 10px;
+  margin:			5% 20% 0 20%;
   
 }
 div{
