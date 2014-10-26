@@ -3,4 +3,43 @@ body{
   font-family:      Georgia, "Times New Roman", Times, serif;
   font-size:        small;
   margin:           10%,0;
+}	
+#main {
+  background-image:	url(img/background.gif);
+  background-repeat: repeat-x;
+  font-size:        100%;
+  padding:          15px;
+  margin:           10px 10px 10px 10px;
+  
+}
+div{
+	border:1px;
+}
+
+/*导航栏*/
+.Navigation{
+	clear:both;
+	height:19px;
+	
+}
+.Navigation ul{
+	list-style:none;
+	margin-top:0px;
+	margin-left:0px;
+	height:15px;
+	padding:0px;
+}
+.Navigation ul li{
+	float:right;
+	margin:0 0 0 1px;	
+	padding:0px;
+	width: 135px;
+	text-align:center;
+}
+.Navigation ul li a{
+	display:block;
+	color:white;
+	text-decoration:none;
+	padding:7px;
+	font-size: 14px;
 }
