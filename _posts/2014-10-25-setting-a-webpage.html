@@ -108,7 +108,7 @@ local:d:\desktop\test.html => remote:/usr/test/test.html<br/>
 
  
 这里我们需要配置成这样                   <br/>
-<textarea rows="9" cols="50">                                         
+<pre>                                         
 Server{                                 
 	listen 80;                          
 	server_name localhost;              
@@ -117,11 +117,11 @@ Server{
 		index test.html                 
 	}                                       
 }    
-</textarea>          
+</pre>          
 </br>                       
 
 如果一个ip地址要对应不同的网页就需要配置多个server                     <br/>
-<textarea rows="20" cols="80">  
+<pre>  
 Server{                                                                
 	listen 80;                                                         
 	server_name  网址1 例如：www.page1.com;                            
@@ -138,7 +138,7 @@ Server{
 		index  test2.html                                              
 	}                                                                      
 }   
-</textarea>  <br/>                                                                   
+</pre>  <br/>                                                                   
 按Esc退出编辑  :wq 保存编辑退出，然后重启 nginx，是配置生效            
 nginx –s reload 回车                                                   
   </p>                                                                
