@@ -11,7 +11,10 @@ body{
   padding:          15px;
   margin:	5% 20% 0 20%;
   border:	#FF4500 dashed 2px;
-  
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 div{
 	border:2px;
@@ -21,7 +24,6 @@ div{
 .Navigation{
 	clear:both;
 	height:19px;
-	
 }
 .Navigation ul{
 	list-style:none;
@@ -43,4 +45,7 @@ div{
 	text-decoration:none;
 	padding:7px;
 	font-size: 14px;
+}
+.head{
+	margin:	0% 20% 0 20%;
 }
