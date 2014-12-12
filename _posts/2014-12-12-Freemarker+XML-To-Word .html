@@ -1,0 +1,26 @@
+---
+layout: default
+title: Freemarker+XML导出Word 
+---
+<h2>{{ page.title }}</h2>
+<p>{{ page.date | date_to_string }}</p>
+
+<div>
+	<p>最近需要使用java生成word文档，有表格，格式还比较难搞，在网上搜索了一下，有很多雷同的，但是感觉夜半难眠的写的东西比较全，还有示例，把链接记着<a href="http://www.havenliu.com/java/514.html"></a>java生成复杂word文档的完美解决方案
+	</p>
+
+	<p>由于表格内部需要加入回车，所以花费了好多好多时间，终于给解决了</p>
+	<div>
+		<p>解决方法：&lt;w:br /&gt; 表示软回车(网页版的回车)；&lt;w:p/&gt;表示硬回车（word的回车）</p>
+		<img src="img/enter.png"/>
+	</div>
+	<p>一个解决问题的思路--逆推法</p>
+	<ol>
+		<li>现在情况是要用xml生成word</li>
+		<li>但这个xml本身是由word另存来的，然后经过修改而来</li>
+		<li>这里我不知道应该在xml里面插入什么符号生成word里的回车</li>
+		<li>那我直接搞个空白word，然后在里面放上回车，另存为xml，然后再去找回车生成的符号不就行了？</li>
+	</ol>
+	
+	<p>照着这个思路，轻松找到了解决方法，之前光顾着上网搜方案，搜了一个下午也没找到，看来，缺乏静下心来思考的习惯呢~~</p>
+</div>
