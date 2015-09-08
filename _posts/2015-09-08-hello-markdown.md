@@ -1,7 +1,9 @@
 ---
 layout: default
-title: 你好，世界
+title: 学习一个新技术要注意的方面
 ---
 ##{{ page.title }}
-+ 我的第一篇文章</p>
-+ {{ page.date | date_to_string }}
+1. 怎么用? 将helloworld的流程走通
+2. 怎么调试,碰到错误怎么解决
+3. 常用操作,常用语法的单元测试或示例 
+4. 待续...
