@@ -6,8 +6,7 @@ body{
 }	
 .main {
   background-image:	url(../img/background.gif);
-  background-repeat: repeat-y;
-  background-repeat: repeat-x;
+  background-repeat: repeat-x repeat-y;
   font-size:        100%;
   padding:          15px;
   margin:	5% 20% 0 20%;
