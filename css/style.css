@@ -6,6 +6,7 @@ body{
 }	
 .main {
   background-image:	url(../img/background.gif);
+  background-repeat: repeat-y;
   background-repeat: repeat-x;
   font-size:        100%;
   padding:          15px;
@@ -15,6 +16,7 @@ body{
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
 }
+
 div{
 	border:2px;
 }
