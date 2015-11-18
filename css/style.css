@@ -17,6 +17,8 @@ body{
 }
 div{
 	border:2px;
+}
+div.main{
 	border:#909090 1px solid;
 	background:#fff;
 	color:#333;
