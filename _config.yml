@@ -1,3 +1,5 @@
 baseurl: /Elusive
 cssPath: /Elusive/css
 imgPath: /Elusive/img
+paginate: 5
+paginate_path: "blog/blogindex:num"
