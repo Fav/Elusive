@@ -50,5 +50,5 @@ title: velocity环境搭建
 
 注意：
 1. 添加velocity-tools-2.0.zip 包里面 lib下所有jar包而不是velocity-1.7.zip包lib下的所有jar包
-2. 在WebContent目录下添加 index.vm，层级有时候容易看错，比如你加到WEB-INF文件夹下的话，就会一直报错说找不到index
+2. 在WebContent目录下添加 index.vm，层级有时候容易看错，比如你加到WEB-INF文件夹下的话，就会一直报错说找不到index。
 
