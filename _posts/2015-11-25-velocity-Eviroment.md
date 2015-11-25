@@ -12,6 +12,7 @@ title: velocity环境搭建
 	[velocity-tools-2.0.zip](http://mirror.bit.edu.cn/apache//velocity/tools/2.0/velocity-tools-2.0.zip)
 
 2. 在Eclipse里面创建动态web工程
+
 3. 要添加的jar包有两部分，将以下内容拷贝到新工程的WebContent\WEB-INF\lib
 	1. velocity-1.7.zip包中的 velocity-1.7-dep.jar 和 velocity-1.7.jar
 	2. velocity-tools-2.0.zip 包里面 lib下所有jar包
@@ -51,6 +52,10 @@ title: velocity环境搭建
 说明运行成功 
 
 注意：
+
 1. 添加velocity-tools-2.0.zip 包里面 lib下所有jar包而不是velocity-1.7.zip包lib下的所有jar包
+
 2. 在WebContent目录下添加 index.vm，层级有时候容易看错，比如你加到WEB-INF文件夹下的话，就会一直报错说找不到index。
+
+3.搭建环境的时候tool.xml暂时是不需要的，需要的时候再往里面添加，这里是最简环境 
 
