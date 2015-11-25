@@ -45,7 +45,9 @@ title: velocity环境搭建
 		</welcome-file-list>
 
 运行程序，能看到
-![成功]("{{ site.imgPath }}/velocity-hello.jpg")
+
+![成功]({{ site.imgPath }}/velocity-hello.jpg)
+
 说明运行成功 
 
 注意：
