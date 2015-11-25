@@ -52,6 +52,8 @@ title: velocity环境搭建
 
 说明运行成功 
 
+[下载源码](http://pan.baidu.com/s/1mgElYDa)
+
 注意：
 
 1. 添加velocity-tools-2.0.zip 包里面 lib下所有jar包而不是velocity-1.7.zip包lib下的所有jar包
