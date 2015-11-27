@@ -52,7 +52,7 @@ title: velocity环境搭建
 
 说明运行成功 
 
-[下载源码](http://pan.baidu.com/s/1mgElYDa)
+[下载源码](http://pan.baidu.com/s/1i3FEhhj)
 
 注意：
 
