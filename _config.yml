@@ -2,3 +2,4 @@ baseurl: /Elusive
 cssPath: /Elusive/css
 imgPath: /Elusive/img
 rarPath: /Elusive/rar
+urlPre : view-source:http://fav.github.io

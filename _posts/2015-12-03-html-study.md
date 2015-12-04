@@ -8,7 +8,7 @@ title: Html--例子
 
 		<div id = "markid" /> 
 		<a href ="***.html#markid" />
-	[示例下载]({{ site.imgPath }}/2015-12-03-html-study-eg.rar )
+	[示例下载]({{site.urlpre}}{{ site.imgPath }}/2015-12-03-html-study-eg.rar )
 
 2. 搜索框，默认文字
 
