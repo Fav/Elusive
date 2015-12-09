@@ -14,7 +14,7 @@ title: Html--例子
 2. 搜索框，默认文字
 
 		<input type="text" class="searchinput"  placeholder="关键词搜索">
-3.div添加阴影
+3. div添加阴影
 
 		<div style ="box-shadow: 2px 2px 10px #861d2b;"></div>
 4. 待续
