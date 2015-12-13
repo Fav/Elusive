@@ -9,7 +9,7 @@ body{
 	font:85% gray georgia,sans-serif;
 }	
 .main {
-	margin:3% 20% 0;
+	margin:0 20%;
 	background: #A3E3ED;
 	opacity: 0.7;
 	padding:          15px;
@@ -23,7 +23,7 @@ body{
 /*导航栏*/
 .Navigation{
 	clear:both;
-	height:19px;
+	height:50px;
 }
 .Navigation ul{
 	list-style:none;
@@ -56,7 +56,7 @@ body{
 }
 #myinfo{
 	line-height: 1.8;
-	padding-left: 10%;
+	padding-left: 100px;
 }
 #myInfo ul {
 	margin: 0;
@@ -75,12 +75,14 @@ body{
 	display: inline;
 	white-space:nowrap;
 }
-#myInfo div h3{
+#myInfo >div >h3{
 	border:solid whitesmoke 1px;
 	border-radius: 30px;
 	width:80px;
 	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
-#myInfo h2,#myInfo h3{
-	display: inline;
+#myInfo>div{
+	margin-top: 30px;
 }
