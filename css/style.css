@@ -56,6 +56,7 @@ body{
 }
 #myinfo{
 	line-height: 1.8;
+	padding-left: 10%;
 }
 #myInfo ul {
 	margin: 0;
@@ -79,4 +80,7 @@ body{
 	border-radius: 30px;
 	width:80px;
 	text-align: center;
+}
+#myInfo h2,#myInfo h3{
+	display: inline;
 }
