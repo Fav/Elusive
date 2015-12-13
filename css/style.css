@@ -54,3 +54,13 @@ body{
 .head{
 	margin:	0% 20% 0 20%;
 }
+#myInfo ul {
+	margin: 0;
+	padding: 0;
+}
+#myInfo ul li{
+	margin: 0;
+	padding: 2px;
+	display: block;
+	
+}
