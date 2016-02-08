@@ -6,17 +6,16 @@ html{
 
 }
 body{
-	font:85% gray georgia,sans-serif;
+	font:85% georgia,sans-serif;
 }	
 .main {
 	margin:0 20%;
 	background: #A3E3ED;
 	opacity: 0.7;
-	padding:          15px;
+	padding:15px;
 	border-radius: 1em;
 	height: 100%;
 	border:#909090 1px solid;
-	color:gray;
 	box-shadow:2px 2px 10px #909090;
 }
 
