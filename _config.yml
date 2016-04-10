@@ -4,4 +4,4 @@ imgPath: /Elusive/img
 rarPath: /Elusive/rar
 urlPre : http://fav.github.io
 paginate: 5
-paginate_path: "Elusive/page:num"
+paginate_path: Elusive/page:num
