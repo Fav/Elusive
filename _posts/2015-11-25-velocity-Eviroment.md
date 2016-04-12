@@ -3,7 +3,7 @@ layout: default
 title: velocity环境搭建
 ---
 
-##velocity环境搭建
+## velocity环境搭建
 直接来步骤了：
 
 1. 到[官网](http://velocity.apache.org/download.cgi)下载安装包（目前最新包链接如下）
@@ -20,16 +20,18 @@ title: velocity环境搭建
 	
 4. 在WebContent目录下添加 index.vm,内容如下：
 
-			#set($hello="Velocity")
-			<html>
-			   <head>
-			     <title>Hello</title>
-			   </head>
-			   <body>
-		
-			     Hello $hello World !
-			   </body>
-			</html>
+
+		#set($hello="Velocity")
+		<html>
+		   <head>
+		     <title>Hello</title>
+		   </head>
+		   <body>
+	
+		     Hello $hello World !
+		   </body>
+		</html>
+
 
 5. 修改web.xml
 
