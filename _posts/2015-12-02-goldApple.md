@@ -3,7 +3,7 @@ layout: default
 title: 关于小团队的小项目
 ---
 
-## 关于小团队的小项目
+
 1. 要从轮子开始造起，确实要考虑很多，要注意积累
 	1. 整个项目的架构是前台：html+css+jquery，后台springmvc + mybatis，数据库 mysql
 	2. 做的功能也不多，主要包括
