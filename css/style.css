@@ -87,3 +87,6 @@ body{
 #myInfo>div{
 	margin-top: 30px;
 }
+.main>p{
+	text-indent: 2em;
+}
